@@ -55,8 +55,7 @@ def get_weather():
     city=sptext()
     if city == "None":
         return
-    api_key = "a3318c05457ee41b8757580c049cfe07"
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+    api_key = "YOUR_API_KEY"
     try:
         response = requests.get(url).json()
         temp = response['main']['temp']
@@ -213,4 +212,5 @@ def main():
             speechtx("Sorry, I am not sure how to do that. Can you try another command?")
     
 if __name__ == '__main__':
+
     main()
